@@ -1,0 +1,239 @@
+﻿<Window x:Class="Car_Rental_System.Admin.AdminHome"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Car_Rental_System.Admin"
+        mc:Ignorable="d"
+        Title="AdminHome" Height="{Binding Source={x:Static SystemParameters.WorkArea}, Path=Height}" 
+Width="{Binding Source={x:Static SystemParameters.WorkArea}, Path=Width}" WindowState="Maximized" ShowInTaskbar="True">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush/>
+        </Grid.Background>
+        <!--Navbar Start-->
+        <Rectangle HorizontalAlignment="Center" Height="50" VerticalAlignment="Top" Width="1536" Fill="#FFEBB935"/>
+        <Button Content="Logout" 
+        Cursor="Hand"
+        HorizontalAlignment="Left" 
+        Margin="1428,10,0,0" 
+        VerticalAlignment="Top" 
+        Width="98" 
+        Height="30" 
+        FontSize="20" 
+        Background="#FFEBB935" 
+        Foreground="White" 
+        RenderTransformOrigin="0.5,0.5"
+                Click="LoginButton_Click">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border Background="{TemplateBinding Background}" 
+            BorderBrush="White" 
+            BorderThickness="1" 
+            CornerRadius="10">
+                        <ContentPresenter HorizontalAlignment="Center" 
+                          VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button Content="Home" 
+        Cursor="Hand"
+        HorizontalAlignment="Left" 
+        Margin="10,10,0,0" 
+        VerticalAlignment="Top" 
+        Width="98" 
+        Height="30" 
+        FontSize="20" 
+        Background="#FFEBB935" 
+        Foreground="White" 
+        RenderTransformOrigin="0.5,0.5"
+                Click="HomeButton_Click">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border Background="{TemplateBinding Background}" 
+                    BorderBrush="White" 
+                    BorderThickness="1" 
+                    CornerRadius="10">
+                        <ContentPresenter HorizontalAlignment="Center" 
+                                  VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <!--Navbar End-->
+
+        <Button Cursor="Hand"  BorderThickness="0" Background="Transparent" Margin="251,110,1027,492" Click="CustomerIcon_Click">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border 
+                CornerRadius="10"
+                BorderBrush="black" 
+                BorderThickness="2" Height="189" Width="244">
+                        <Border.Background>
+                            <ImageBrush ImageSource="/Images/AddCustomer.jpg" 
+                        Stretch="UniformToFill"/>
+                        </Border.Background>
+                        <Grid Margin="0,0,-2,-2">
+                            <Rectangle Fill="#FFEBB935" Opacity="0.6"/>
+                        </Grid>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+        <Button Cursor="Hand"  BorderThickness="0" Background="Transparent" Margin="636,109,636,492" Click="StaffIcon_Click">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border 
+        CornerRadius="10"
+        BorderBrush="black" 
+        BorderThickness="2" Height="189" Width="244">
+                        <Border.Background>
+                            <ImageBrush ImageSource="/Images/AddCustomer.jpg" 
+                Stretch="UniformToFill"/>
+                        </Border.Background>
+                        <Grid Margin="0,0,-2,-2">
+                            <Rectangle Fill="#FFEBB935" Opacity="0.6"/>
+                        </Grid>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+        <Button Cursor="Hand"  BorderThickness="0" Background="Transparent" Margin="1037,109,249,491" Click="DealerIcon_Click">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border 
+                CornerRadius="10"
+                BorderBrush="black" 
+                BorderThickness="2" Height="189" Width="244">
+                        <Border.Background>
+                            <ImageBrush ImageSource="/Images/AddCustomer.jpg" 
+                        Stretch="UniformToFill"/>
+                        </Border.Background>
+                        <Grid Margin="0,0,-2,-2">
+                            <Rectangle Fill="#FFEBB935" Opacity="0.6"/>
+                        </Grid>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+        <Button Cursor="Hand" BorderThickness="0" Background="Transparent" Margin="383,445,901,155" Click="VehicleIcon_Click">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border CornerRadius="10" BorderBrush="black" BorderThickness="2" Height="189" Width="244">
+                        <Border.Background>
+                            <ImageBrush ImageSource="/Images/Car.png" Stretch="UniformToFill"/>
+                        </Border.Background>
+                        <Grid Margin="0,0,-2,-2">
+                            <Rectangle Fill="#FF14BA30" Opacity="0.5"/>
+                        </Grid>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+
+        <Button Cursor="Hand"  BorderThickness="0" Background="Transparent" Margin="886,445,372,155" Click="OrderIcon_Click">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border 
+                    CornerRadius="10"
+                    BorderBrush="black" 
+                    BorderThickness="2" Height="189" Width="244">
+                        <Border.Background>
+                            <ImageBrush ImageSource="/Images/Policy.jpg" 
+                        Stretch="Fill"/>
+                        </Border.Background>
+                        <Grid Margin="0,0,-2,-2">
+                            <Rectangle Fill="#FF14BA30" Opacity="0.5"/>
+                        </Grid>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Label HorizontalAlignment="Left" Margin="295,167,0,0" VerticalAlignment="Top">
+            <TextBlock Text="CUSTOMER" FontSize="30" Foreground="White" FontWeight="Bold">
+                <TextBlock.Effect>
+                    <DropShadowEffect 
+                        ShadowDepth="0" 
+                        Color="Black"
+                        Opacity="2"
+                        BlurRadius="0"
+                        />
+                </TextBlock.Effect>
+            </TextBlock>
+        </Label>
+
+        <Label HorizontalAlignment="Left" Margin="1105,185,0,0" VerticalAlignment="Top">
+            <TextBlock Text="DEALER" FontSize="30" Foreground="White" FontWeight="Bold">
+                <TextBlock.Effect>
+                    <DropShadowEffect 
+                    ShadowDepth="0" 
+                    Color="Black"
+                    Opacity="2"
+                    BlurRadius="0"
+                    />
+                </TextBlock.Effect>
+            </TextBlock>
+        </Label>
+
+        <Label HorizontalAlignment="Left" Margin="445,520,0,0" VerticalAlignment="Top">
+            <TextBlock Text="VEHICLE" FontSize="30" Foreground="White" FontWeight="Bold">
+                <TextBlock.Effect>
+                    <DropShadowEffect 
+            ShadowDepth="0" 
+            Color="Black"
+            Opacity="2"
+            BlurRadius="0"
+            />
+                </TextBlock.Effect>
+            </TextBlock>
+        </Label>
+
+        <Label HorizontalAlignment="Left" Margin="970,520,0,0" VerticalAlignment="Top">
+            <TextBlock Text="ORDER" FontSize="30" Foreground="White" FontWeight="Bold">
+                <TextBlock.Effect>
+                    <DropShadowEffect 
+    ShadowDepth="0" 
+    Color="Black"
+    Opacity="2"
+    BlurRadius="0"
+    />
+                </TextBlock.Effect>
+            </TextBlock>
+        </Label>
+
+        <Label HorizontalAlignment="Left" Margin="716,168,0,0" VerticalAlignment="Top">
+            <TextBlock Text="STAFF" FontSize="30" Foreground="White" FontWeight="Bold">
+                <TextBlock.Effect>
+                    <DropShadowEffect 
+                ShadowDepth="0" 
+                Color="Black"
+                Opacity="2"
+                BlurRadius="0"
+                />
+                </TextBlock.Effect>
+            </TextBlock>
+        </Label>
+
+    </Grid>
+</Window>

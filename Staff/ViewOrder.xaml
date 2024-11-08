@@ -1,0 +1,165 @@
+﻿<Window x:Class="Car_Rental_System.Staff.ViewOrder"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Car_Rental_System.Staff"
+        mc:Ignorable="d"
+        Title="ViewOrder" Height="{Binding Source={x:Static SystemParameters.WorkArea}, Path=Height}" 
+Width="{Binding Source={x:Static SystemParameters.WorkArea}, Path=Width}" WindowState="Maximized" ShowInTaskbar="True">
+    <Grid>
+        <!--Navbar Start-->
+        <Rectangle HorizontalAlignment="Center" Height="50" VerticalAlignment="Top" Width="1536" Fill="#FFE8B800"/>
+        <Button Content="Logout" 
+ Cursor="Hand"
+ HorizontalAlignment="Left" 
+ Margin="1428,10,0,0" 
+ VerticalAlignment="Top" 
+ Width="98" 
+ Height="30" 
+ FontSize="20" 
+ Background="#FFE8B800" 
+ Foreground="White" 
+ RenderTransformOrigin="0.5,0.5"
+         Click="LoginButton_Click">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border Background="{TemplateBinding Background}" 
+     BorderBrush="White" 
+     BorderThickness="1" 
+     CornerRadius="10">
+                        <ContentPresenter HorizontalAlignment="Center" 
+                   VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button Content="Home" 
+ Cursor="Hand"
+ HorizontalAlignment="Left" 
+ Margin="10,10,0,0" 
+ VerticalAlignment="Top" 
+ Width="98" 
+ Height="30" 
+ FontSize="20" 
+ Background="#FFE8B800" 
+ Foreground="White" 
+ RenderTransformOrigin="0.5,0.5"
+         Click="HomeButton_Click">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border Background="{TemplateBinding Background}" 
+             BorderBrush="White" 
+             BorderThickness="1" 
+             CornerRadius="10">
+                        <ContentPresenter HorizontalAlignment="Center" 
+                           VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Border HorizontalAlignment="Left"
+        Height="50"
+        VerticalAlignment="Top"
+        Width="182"
+        Background="#FFE8B800"
+        CornerRadius="10"
+        Margin="-28,50,0,0">
+        </Border>
+        <Label Content="Invoices" HorizontalAlignment="Left" Margin="17,50,0,0" VerticalAlignment="Top" FontSize="30" Foreground="White"/>
+
+        <Border HorizontalAlignment="Left"
+Height="40"
+VerticalAlignment="Top"
+Width="164"
+Background="#FFE8B800"
+CornerRadius="10"
+Margin="1181,50,0,0">
+        </Border>
+        <Label Content="CUSTOMER ID: " HorizontalAlignment="Left" Margin="1185,50,0,0" VerticalAlignment="Top" FontSize="20" Foreground="White"/>
+        <ComboBox x:Name="cmbCustomerID" Margin="1336,50,0,0" VerticalAlignment="Top" FontSize="20" Foreground="Black" Background="#FF2A3CCA" BorderBrush="#FF2A3CCA" Width="200" Height="40" SelectionChanged="cmbCustomerID_SelectionChanged"/>
+
+        <Border HorizontalAlignment="Left"
+Height="40"
+VerticalAlignment="Top"
+Width="164"
+Background="#FFE8B800"
+CornerRadius="10"
+Margin="1181,90,0,0">
+        </Border>
+        <Label Content="ORDER ID: " HorizontalAlignment="Left" Margin="1185,90,0,0" VerticalAlignment="Top" FontSize="20" Foreground="White"/>
+        <ComboBox x:Name="cmbOrderID" Margin="1336,90,0,0" VerticalAlignment="Top" FontSize="20" Foreground="Black" Background="#FF2A3CCA" BorderBrush="#FF2A3CCA" Width="200" Height="40" SelectionChanged="cmbOrderID_SelectionChanged"/>
+        <!--Navbar End-->
+        <!--Form Start-->
+        <Label Content="Customer Details" HorizontalAlignment="Left" Margin="78,114,0,0" VerticalAlignment="Top" FontSize="25"/>
+        <Label Content="Vehicle Details" HorizontalAlignment="Left" Margin="614,118,0,0" VerticalAlignment="Top" FontSize="25"/>
+
+        <Label Content="Name:" HorizontalAlignment="Left" Margin="78,154,0,0" VerticalAlignment="Top" FontSize="20" Width="74"/>
+        <Label x:Name="txtName" Content="" HorizontalAlignment="Left" Margin="157,154,0,0" VerticalAlignment="Top" FontSize="20" Width="353"/>
+
+        <Label Content="Phone Number:" HorizontalAlignment="Left" Margin="78,238,0,0" VerticalAlignment="Top" FontSize="20" Width="164"/>
+        <Label x:Name="txtNumber" Content="" HorizontalAlignment="Left" Margin="247,238,0,0" VerticalAlignment="Top" FontSize="20" Width="353"/>
+
+        <Label Content="Rent Date:" HorizontalAlignment="Left" Margin="78,275,0,0" VerticalAlignment="Top" FontSize="20" Width="105"/>
+        <Label x:Name="txtSDate" Content="" HorizontalAlignment="Left" Margin="188,275,0,0" VerticalAlignment="Top" FontSize="20" Width="353"/>
+
+        <Label Content="Return Date:" HorizontalAlignment="Left" Margin="78,312,0,0" VerticalAlignment="Top" FontSize="20" Width="131"/>
+        <Label x:Name="txtEDate" Content="" HorizontalAlignment="Left" Margin="214,312,0,0" VerticalAlignment="Top" FontSize="20" Width="353"/>
+
+        <Label Content="Deposit:" HorizontalAlignment="Left" Margin="74,385,0,0" VerticalAlignment="Top" FontSize="25" Width="109"/>
+        <Label x:Name="txtDeposit" Content="" HorizontalAlignment="Left" Margin="188,385,0,0" VerticalAlignment="Top" FontSize="25" Width="353"/>
+
+        <Label Content="Total Rent:" HorizontalAlignment="Left" Margin="71,427,0,0" VerticalAlignment="Top" FontSize="25" Width="138"/>
+        <Label x:Name="txtTotal" Content="" HorizontalAlignment="Left" Margin="209,427,0,0" VerticalAlignment="Top" FontSize="25" Width="353"/>
+
+        <Label Content="Make (Year):" HorizontalAlignment="Left" Margin="614,158,0,0" VerticalAlignment="Top" FontSize="20" Width="127"/>
+        <Label x:Name="txtMake" Content="" HorizontalAlignment="Left" Margin="746,158,0,0" VerticalAlignment="Top" FontSize="20" Width="353"/>
+
+        <Label Content="Model:" HorizontalAlignment="Left" Margin="614,200,0,0" VerticalAlignment="Top" FontSize="20" Width="85"/>
+        <Label x:Name="txtModel" Content="" HorizontalAlignment="Left" Margin="746,200,0,0" VerticalAlignment="Top" FontSize="20" Width="353"/>
+
+        <Label Content="Colour:" HorizontalAlignment="Left" Margin="614,242,0,0" VerticalAlignment="Top" FontSize="20" Width="85"/>
+        <Label x:Name="txtColour" Content="" HorizontalAlignment="Left" Margin="746,242,0,0" VerticalAlignment="Top" FontSize="20" Width="353"/>
+
+        <Label Content="Driver License:" HorizontalAlignment="Left" Margin="78,196,0,0" VerticalAlignment="Top" FontSize="20" Width="149"/>
+        <Label x:Name="txtLicenseD" Content="" HorizontalAlignment="Left" Margin="232,196,0,0" VerticalAlignment="Top" FontSize="20" Width="353"/>
+
+
+        <Label Content="License Plate:" HorizontalAlignment="Left" Margin="614,321,0,0" VerticalAlignment="Top" FontSize="20" Width="145"/>
+        <Label x:Name="txtLicenseP" Content="" HorizontalAlignment="Left" Margin="746,321,0,0" VerticalAlignment="Top" FontSize="20" Width="353"/>
+
+        <Label Content="Registration Number:" HorizontalAlignment="Left" Margin="614,279,0,0" VerticalAlignment="Top" FontSize="20" Width="206"/>
+        <Label x:Name="txtRegistration" Content="" HorizontalAlignment="Left" Margin="825,279,0,0" VerticalAlignment="Top" FontSize="20" Width="353"/>
+
+        <Label Content="Fuel Type:" HorizontalAlignment="Left" Margin="614,363,0,0" VerticalAlignment="Top" FontSize="20" Width="127"/>
+        <Label x:Name="txtFuel" Content="" HorizontalAlignment="Left" Margin="746,363,0,0" VerticalAlignment="Top" FontSize="20" Width="353"/>
+
+        <Label Content="Number of seats:" HorizontalAlignment="Left" Margin="614,400,0,0" VerticalAlignment="Top" FontSize="20" Width="180"/>
+        <Label x:Name="txtSeats" Content="" HorizontalAlignment="Left" Margin="799,400,0,0" VerticalAlignment="Top" FontSize="20" Width="353"/>
+
+        <CheckBox x:Name="checkboxInsurance"  Content="Insurance" HorizontalAlignment="Left" Margin="78,354,0,0" VerticalAlignment="Top" FontSize="20" Width="118" IsEnabled="False"/>
+        <!--Form End-->
+
+        <Rectangle HorizontalAlignment="Center" Height="36" VerticalAlignment="Top" Width="1536" Fill="#FFE8B800" Margin="0,482,0,0"/>
+        <Label Content="CUSTOMERS" HorizontalAlignment="Left" Margin="17,482,0,0" VerticalAlignment="Top" FontSize="20" Foreground="White"/>
+        <Label Content="ORDERS" HorizontalAlignment="Left" Margin="768,482,0,0" VerticalAlignment="Top" FontSize="20" Foreground="White"/>
+        <DataGrid x:Name="CustomerData" IsReadOnly="True" AutoGenerateColumns="True" Margin="0,524,768,0" SelectionChanged="CustomerData_SelectionChanged"/>
+        <DataGrid x:Name="OrderData" IsReadOnly="True" AutoGenerateColumns="True" Margin="768,523,0,0" SelectionChanged="OrderData_SelectionChanged"/>
+    </Grid>
+</Window>

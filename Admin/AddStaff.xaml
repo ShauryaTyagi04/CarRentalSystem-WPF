@@ -1,0 +1,204 @@
+﻿<Window x:Class="Car_Rental_System.Admin.AddStaff"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Car_Rental_System.Admin"
+        mc:Ignorable="d"
+        Title="AddStaff" Height="{Binding Source={x:Static SystemParameters.WorkArea}, Path=Height}" 
+Width="{Binding Source={x:Static SystemParameters.WorkArea}, Path=Width}" WindowState="Maximized" ShowInTaskbar="True">
+    <Grid>
+        <!--Navbar Start-->
+        <Rectangle HorizontalAlignment="Center" Height="50" VerticalAlignment="Top" Width="1536" Fill="#FFEBB935"/>
+        <Button Content="Logout" 
+ Cursor="Hand"
+ HorizontalAlignment="Left" 
+ Margin="1428,10,0,0" 
+ VerticalAlignment="Top" 
+ Width="98" 
+ Height="30" 
+ FontSize="20" 
+ Background="#FFEBB935" 
+ Foreground="White" 
+ RenderTransformOrigin="0.5,0.5"
+         Click="LoginButton_Click">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border Background="{TemplateBinding Background}" 
+     BorderBrush="White" 
+     BorderThickness="1" 
+     CornerRadius="10">
+                        <ContentPresenter HorizontalAlignment="Center" 
+                   VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button Content="View Existing Customers" 
+Cursor="Hand"
+HorizontalAlignment="Left" 
+Margin="1161,10,0,0" 
+VerticalAlignment="Top" 
+Width="240" 
+Height="30" 
+FontSize="20" 
+Background="#FFEBB935" 
+Foreground="White" 
+RenderTransformOrigin="0.5,0.5"
+        Click="ViewButton_Click">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border Background="{TemplateBinding Background}" 
+    BorderBrush="White" 
+    BorderThickness="1" 
+    CornerRadius="10">
+                        <ContentPresenter HorizontalAlignment="Center" 
+                  VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button Content="Home" 
+ Cursor="Hand"
+ HorizontalAlignment="Left" 
+ Margin="10,10,0,0" 
+ VerticalAlignment="Top" 
+ Width="98" 
+ Height="30" 
+ FontSize="20" 
+ Background="#FFEBB935" 
+ Foreground="White" 
+ RenderTransformOrigin="0.5,0.5"
+         Click="HomeButton_Click">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border Background="{TemplateBinding Background}" 
+             BorderBrush="White" 
+             BorderThickness="1" 
+             CornerRadius="10">
+                        <ContentPresenter HorizontalAlignment="Center" 
+                           VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Border HorizontalAlignment="Left"
+        Height="50"
+        VerticalAlignment="Top"
+        Width="300"
+        Background="#FFEBB935"
+        CornerRadius="10"
+        Margin="-28,50,0,0">
+        </Border>
+        <Label Content="ADD EMPLOYEE" HorizontalAlignment="Left" Margin="17,50,0,0" VerticalAlignment="Top" FontSize="30" Foreground="White"/>
+        <!--Navbar End-->
+
+        <!--Form Start-->
+        <Label Content="First Name" HorizontalAlignment="Left" Margin="507,115,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <Border HorizontalAlignment="Left" Margin="507,156,0,0" VerticalAlignment="Top" Width="225" Height="30" 
+    BorderBrush="Black" CornerRadius="10" BorderThickness="1">
+            <TextBox x:Name="txtFName" TextWrapping="Wrap" Text="" FontSize="20" Background="Transparent" BorderThickness="0" 
+         VerticalContentAlignment="Center" HorizontalContentAlignment="Left" />
+        </Border>
+
+        <Label Content="Last Name" HorizontalAlignment="Left" Margin="775,121,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <Border HorizontalAlignment="Left" Margin="775,162,0,0" VerticalAlignment="Top" Width="225" Height="30" 
+BorderBrush="Black" CornerRadius="10" BorderThickness="1">
+            <TextBox x:Name="txtLName" TextWrapping="Wrap" Text="" FontSize="20" Background="Transparent" BorderThickness="0" 
+     VerticalContentAlignment="Center" HorizontalContentAlignment="Left" />
+        </Border>
+
+
+        <Label Content="User Name" HorizontalAlignment="Left" Margin="507,190,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <Border HorizontalAlignment="Left" Margin="507,231,0,0" VerticalAlignment="Top" Width="500" Height="30" 
+    BorderBrush="Black" CornerRadius="10" BorderThickness="1">
+            <TextBox x:Name="txtUsername" TextWrapping="Wrap" Text="" FontSize="20" Background="Transparent" BorderThickness="0" 
+         VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Width="500" />
+        </Border>
+
+        <Label Content="Email Address" HorizontalAlignment="Left" Margin="507,290,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <Border HorizontalAlignment="Center" Margin="0,332,0,0" VerticalAlignment="Top" Width="500" Height="30" 
+BorderBrush="Black" CornerRadius="10" BorderThickness="1">
+            <TextBox x:Name="txtEmail" TextWrapping="Wrap" Text="" FontSize="20" Background="Transparent" BorderThickness="0" 
+     VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Width="500" />
+        </Border>
+
+        <Label Content="Password" HorizontalAlignment="Left" Margin="506,390,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <Border HorizontalAlignment="Left" Margin="515,432,0,0" VerticalAlignment="Top" Width="500" Height="30" 
+BorderBrush="Black" CornerRadius="10" BorderThickness="1">
+            <TextBox x:Name="txtPassword" TextWrapping="Wrap" Text="" FontSize="20" Background="Transparent" BorderThickness="0" 
+     VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Width="500" />
+        </Border>
+
+        <Label Content="Confirm Password" HorizontalAlignment="Left" Margin="507,490,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <Border HorizontalAlignment="Left" Margin="523,530,0,0" VerticalAlignment="Top" Width="500" Height="30" 
+BorderBrush="Black" CornerRadius="10" BorderThickness="1">
+            <TextBox x:Name="txtCPassword" TextWrapping="Wrap" Text="" FontSize="20" Background="Transparent" BorderThickness="0" 
+     VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Width="500" />
+        </Border>
+
+        <Label Content="Role" HorizontalAlignment="Left" Margin="507,590,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <ComboBox x:Name="cmbRole" HorizontalAlignment="Center" Margin="0,630,0,0" VerticalAlignment="Top" Width="510" Height="30" FontSize="20">
+            <ComboBoxItem Content="Staff"/>
+            <ComboBoxItem Content="Manager"/>
+        </ComboBox>
+
+
+        <Button Content="SUBMIT" 
+    HorizontalAlignment="Center" 
+    Margin="0,684,0,0" 
+    VerticalAlignment="Top" 
+    Width="1536" 
+    Height="30" 
+    FontSize="20" 
+    Background="#FFEBB935" 
+    Foreground="White" RenderTransformOrigin="0.5,0.5"
+                Click="SignupButton_Click"
+                Cursor="Hand">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border Background="{TemplateBinding Background}" 
+                BorderBrush="Transparent" 
+                BorderThickness="1" 
+                CornerRadius="10">
+                        <ContentPresenter HorizontalAlignment="Center" 
+                              VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <!--Form End-->
+    </Grid>
+</Window>

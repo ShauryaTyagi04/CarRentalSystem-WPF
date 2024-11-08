@@ -1,0 +1,108 @@
+﻿<Window x:Class="Car_Rental_System.Signup"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Car_Rental_System"
+        mc:Ignorable="d"
+        Title="Signup" Height="{Binding Source={x:Static SystemParameters.WorkArea}, Path=Height}" 
+Width="{Binding Source={x:Static SystemParameters.WorkArea}, Path=Width}" WindowState="Maximized" ShowInTaskbar="True">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="199*"/>
+            <ColumnDefinition Width="57*"/>
+        </Grid.ColumnDefinitions>
+        <Rectangle HorizontalAlignment="Left" Height="800" Stroke="Black" VerticalAlignment="Center" Width="768" Fill="#FFC38600"/>
+        <Image Margin="0,0,426,0" Source="/Images/bg.jpg" Stretch="Fill" Opacity="0.2"/>
+        <TextBlock HorizontalAlignment="Left" Height="356" Margin="10,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="423" Foreground="White" FontSize="50" FontFamily="Bahnschrift Light"><LineBreak/><Run Text="Drive Your Journey with Ease"/></TextBlock>
+        <Rectangle Margin="1031,10,281,678" Grid.ColumnSpan="2">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="/Images/logo.png" Stretch="UniformToFill" AlignmentX="Center" AlignmentY="Center"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+
+        <Label Content="First Name" HorizontalAlignment="Left" Margin="814,148,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <Border HorizontalAlignment="Left" Margin="814,189,0,0" VerticalAlignment="Top" Width="300" Height="30" 
+    BorderBrush="Black" CornerRadius="10" BorderThickness="1" Grid.ColumnSpan="2">
+            <TextBox x:Name="txtFName" TextWrapping="Wrap" Text="" FontSize="20" Background="Transparent" BorderThickness="0" 
+         VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Margin="9,0,0,0" />
+        </Border>
+
+        <Label Content="Last Name" HorizontalAlignment="Left" Margin="0,148,0,0" VerticalAlignment="Top" FontSize="20" Grid.Column="1"/>
+        <Border HorizontalAlignment="Left" Margin="0,189,0,0" VerticalAlignment="Top" Width="300" Height="30" 
+BorderBrush="Black" CornerRadius="10" BorderThickness="1" Grid.Column="1">
+            <TextBox x:Name="txtLName" TextWrapping="Wrap" Text="" FontSize="20" Background="Transparent" BorderThickness="0" 
+     VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Margin="9,0,0,0" />
+        </Border>
+
+
+        <Label Content="User Name" HorizontalAlignment="Left" Margin="814,223,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <Border HorizontalAlignment="Left" Margin="814,264,0,0" VerticalAlignment="Top" Width="670" Height="30" 
+    BorderBrush="Black" CornerRadius="10" BorderThickness="1" Grid.ColumnSpan="2">
+            <TextBox x:Name="txtUsername" TextWrapping="Wrap" Text="" FontSize="20" Background="Transparent" BorderThickness="0" 
+         VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Margin="9,0,0,0" />
+        </Border>
+
+        <Label Content="Email Address" HorizontalAlignment="Left" Margin="814,323,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <Border HorizontalAlignment="Left" Margin="814,364,0,0" VerticalAlignment="Top" Width="670" Height="30" 
+BorderBrush="Black" CornerRadius="10" BorderThickness="1" Grid.ColumnSpan="2">
+            <TextBox x:Name="txtEmail" TextWrapping="Wrap" Text="" FontSize="20" Background="Transparent" BorderThickness="0" 
+     VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Margin="9,0,0,0" />
+        </Border>
+
+        <Label Content="Password" HorizontalAlignment="Left" Margin="813,423,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <Border HorizontalAlignment="Left" Margin="814,464,0,0" VerticalAlignment="Top" Width="670" Height="30" 
+BorderBrush="Black" CornerRadius="10" BorderThickness="1" Grid.ColumnSpan="2">
+            <TextBox x:Name="txtPassword" TextWrapping="Wrap" Text="" FontSize="20" Background="Transparent" BorderThickness="0" 
+     VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Margin="9,0,0,0" />
+        </Border>
+
+        <Label Content="Confirm Password" HorizontalAlignment="Left" Margin="814,523,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <Border HorizontalAlignment="Left" Margin="814,564,0,0" VerticalAlignment="Top" Width="670" Height="30" 
+BorderBrush="Black" CornerRadius="10" BorderThickness="1" Grid.ColumnSpan="2">
+            <TextBox x:Name="txtCPassword" TextWrapping="Wrap" Text="" FontSize="20" Background="Transparent" BorderThickness="0" 
+     VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Margin="9,0,0,0" />
+        </Border>
+
+        <Label Content="Role" HorizontalAlignment="Left" Margin="814,623,0,0" VerticalAlignment="Top" FontSize="20"/>
+
+
+        <Button Content="Signup" 
+    HorizontalAlignment="Left" 
+    Margin="814,718,0,0" 
+    VerticalAlignment="Top" 
+    Width="670" 
+    Height="30" 
+    FontSize="20" 
+    Background="#FFEBB935" 
+    Foreground="White" Grid.ColumnSpan="2" RenderTransformOrigin="0.5,0.5"
+                Click="SignupButton_Click"
+                Cursor="Hand">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border Background="{TemplateBinding Background}" 
+                BorderBrush="Transparent" 
+                BorderThickness="1" 
+                CornerRadius="10">
+                        <ContentPresenter HorizontalAlignment="Center" 
+                              VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Label Name="LoginRedirect" Content="Have an account? Login." HorizontalAlignment="Left" Margin="1031,753,0,0" VerticalAlignment="Top" FontSize="20" Foreground="#FF0090FF" Grid.ColumnSpan="2" Cursor="Hand" MouseDown="LoginRedirect_MouseDown"/>
+        <ComboBox x:Name="cmbRole" HorizontalAlignment="Left" Margin="814,664,0,0" VerticalAlignment="Top" Width="670" Height="30" Grid.ColumnSpan="2" FontSize="20">
+            <ComboBoxItem Content="Staff"/>
+            <ComboBoxItem Content="Manager"/>
+        </ComboBox>
+    </Grid>
+</Window>

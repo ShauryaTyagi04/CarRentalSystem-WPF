@@ -1,0 +1,269 @@
+﻿<Window x:Class="Car_Rental_System.Admin.UpdateDealer"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Car_Rental_System.Admin"
+        mc:Ignorable="d"
+        Title="UpdateDealer" Height="{Binding Source={x:Static SystemParameters.WorkArea}, Path=Height}" 
+Width="{Binding Source={x:Static SystemParameters.WorkArea}, Path=Width}" WindowState="Maximized" ShowInTaskbar="True">
+    <Grid>
+        <!--Navbar Start-->
+        <Rectangle HorizontalAlignment="Center" Height="50" VerticalAlignment="Top" Width="1536" Fill="#FFE8B800"/>
+        <Button Content="Logout" 
+ Cursor="Hand"
+ HorizontalAlignment="Left" 
+ Margin="1428,10,0,0" 
+ VerticalAlignment="Top" 
+ Width="98" 
+ Height="30" 
+ FontSize="20" 
+ Background="#FFE8B800" 
+ Foreground="White" 
+ RenderTransformOrigin="0.5,0.5"
+         Click="LoginButton_Click">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border Background="{TemplateBinding Background}" 
+     BorderBrush="White" 
+     BorderThickness="1" 
+     CornerRadius="10">
+                        <ContentPresenter HorizontalAlignment="Center" 
+                   VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+        <Button Content="Home" 
+ Cursor="Hand"
+ HorizontalAlignment="Left" 
+ Margin="10,10,0,0" 
+ VerticalAlignment="Top" 
+ Width="98" 
+ Height="30" 
+ FontSize="20" 
+ Background="#FFE8B800" 
+ Foreground="White" 
+ RenderTransformOrigin="0.5,0.5"
+         Click="HomeButton_Click">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border Background="{TemplateBinding Background}" 
+             BorderBrush="White" 
+             BorderThickness="1" 
+             CornerRadius="10">
+                        <ContentPresenter HorizontalAlignment="Center" 
+                           VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Border HorizontalAlignment="Left"
+    Height="50"
+    VerticalAlignment="Top"
+    Width="244"
+    Background="#FFE8B800"
+    CornerRadius="10"
+    Margin="-28,50,0,0">
+        </Border>
+        <Label Content="VIEW DEALER" HorizontalAlignment="Left" Margin="17,50,0,0" VerticalAlignment="Top" FontSize="30" Foreground="White"/>
+        <Border HorizontalAlignment="Left"
+Height="40"
+VerticalAlignment="Top"
+Width="164"
+Background="#FFE8B800"
+CornerRadius="10"
+Margin="1181,50,0,0">
+        </Border>
+        <Label Content="DEALER ID: " HorizontalAlignment="Left" Margin="1206,50,0,0" VerticalAlignment="Top" FontSize="20" Foreground="White"/>
+        <ComboBox x:Name="cmbDealerID" Margin="1336,50,0,0" VerticalAlignment="Top" FontSize="20" Foreground="Black" Background="#FF2A3CCA" BorderBrush="#FF2A3CCA" Width="200" Height="40" SelectionChanged="cmbDealerID_SelectionChanged"/>
+
+        <Label x:Name="txtIsApproved" Content="" HorizontalAlignment="Left" Margin="444,58,0,0" VerticalAlignment="Top" FontSize="25" Width="282"/>
+        <Label Content="Application Status:" HorizontalAlignment="Left" Margin="225,58,0,0" VerticalAlignment="Top" FontSize="25"/>
+
+        <Label x:Name="txtVehicles" Content="" HorizontalAlignment="Left" Margin="1090,58,0,0" VerticalAlignment="Top" FontSize="25" Width="91"/>
+        <Label Content="Number of Vehicles:" HorizontalAlignment="Left" Margin="859,57,0,0" VerticalAlignment="Top" FontSize="25"/>
+
+        <!--Navbar End-->
+        <!--Form Start-->
+
+        <Label Content="First Name" HorizontalAlignment="Left" Margin="82,116,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <Border HorizontalAlignment="Left" Margin="82,157,0,0" VerticalAlignment="Top" Width="500" Height="30" 
+            BorderBrush="Black" CornerRadius="10" BorderThickness="1">
+            <TextBox x:Name="txtFName" TextWrapping="Wrap" Text="" FontSize="20" Background="Transparent" BorderThickness="0" 
+                 VerticalContentAlignment="Center" HorizontalContentAlignment="Left" />
+        </Border>
+
+        <Label Content="Last Name" HorizontalAlignment="Left" Margin="82,216,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <Border HorizontalAlignment="Left" Margin="82,257,0,0" VerticalAlignment="Top" Width="500" Height="30" 
+    BorderBrush="Black" CornerRadius="10" BorderThickness="1">
+            <TextBox x:Name="txtLName" TextWrapping="Wrap" Text="" FontSize="20" Background="Transparent" BorderThickness="0" 
+         VerticalContentAlignment="Center" HorizontalContentAlignment="Left" />
+        </Border>
+
+        <Label Content="Joining Date" HorizontalAlignment="Left" Margin="82,316,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <Border HorizontalAlignment="Left" Margin="82,357,0,0" VerticalAlignment="Top" Width="500" Height="30"
+        BorderBrush="Black" CornerRadius="10" BorderThickness="1">
+            <TextBox x:Name="txtDate" TextWrapping="Wrap" FontSize="20" Background="Transparent" BorderThickness="0"
+             VerticalContentAlignment="Center" HorizontalContentAlignment="Left" />
+        </Border>
+
+
+        <Label Content="Contact Number" HorizontalAlignment="Left" Margin="970,216,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <Border HorizontalAlignment="Left" Margin="970,257,0,0" VerticalAlignment="Top" Width="500" Height="30" 
+BorderBrush="Black" CornerRadius="10" BorderThickness="1">
+            <TextBox x:Name="txtNumber" TextWrapping="Wrap" Text="" FontSize="20" Background="Transparent" BorderThickness="0" 
+     VerticalContentAlignment="Center" HorizontalContentAlignment="Left" />
+        </Border>
+
+        <Label Content="Email Address" HorizontalAlignment="Left" Margin="972,316,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <Border HorizontalAlignment="Left" Margin="972,357,0,0" VerticalAlignment="Top" Width="500" Height="30" 
+BorderBrush="Black" CornerRadius="10" BorderThickness="1">
+            <TextBox x:Name="txtEmail" TextWrapping="Wrap" Text="" FontSize="20" Background="Transparent" BorderThickness="0" 
+     VerticalContentAlignment="Center" HorizontalContentAlignment="Left" />
+        </Border>
+
+
+
+        <!--Expandable Textbox-->
+        <Label Content="Address" HorizontalAlignment="Left" Margin="970,116,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <Border HorizontalAlignment="Left"
+        Margin="970,157,0,0"
+        VerticalAlignment="Top"
+        Width="300"
+        BorderBrush="Black"
+        CornerRadius="10"
+        BorderThickness="1">
+            <TextBox x:Name="txtAddress" TextWrapping="Wrap" 
+             FontSize="20" 
+             Background="Transparent" 
+             BorderThickness="0" 
+             VerticalContentAlignment="Top" 
+             HorizontalContentAlignment="Left" 
+             VerticalScrollBarVisibility="Disabled"
+                AcceptsReturn="True"
+                MinHeight="30"
+                Height="Auto" />
+        </Border>
+        <!--Expandable Textbox End-->
+
+        <Label Content="Post Code" HorizontalAlignment="Left" Margin="1282,116,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <Border HorizontalAlignment="Left" Margin="1282,157,0,0" VerticalAlignment="Top" Width="210" Height="30" 
+BorderBrush="Black" CornerRadius="10" BorderThickness="1">
+            <TextBox x:Name="txtPost" TextWrapping="Wrap" Text="" FontSize="20" Background="Transparent" BorderThickness="0" 
+     VerticalContentAlignment="Center" HorizontalContentAlignment="Left" />
+        </Border>
+        <!--Form End-->
+
+        <!--Submit and Remove Buttons-->
+        <Button x:Name="Approve" Content="APPROVE" 
+    Cursor="Hand"
+    HorizontalAlignment="Left" 
+    Margin="0,432,0,0" 
+    VerticalAlignment="Top" 
+    Width="512" 
+    Height="30" 
+    FontSize="20" 
+    Background="#FF12AF0A" 
+    Foreground="White" RenderTransformOrigin="0.5,0.5" Click="Approve_Click">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border Background="{TemplateBinding Background}" 
+        BorderBrush="Transparent" 
+        BorderThickness="1" 
+        CornerRadius="10">
+                        <ContentPresenter HorizontalAlignment="Center" 
+                      VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button x:Name="Reject" Content="REJECT" 
+        Cursor="Hand"
+        HorizontalAlignment="Left" 
+        Margin="1028,432,0,0" 
+        VerticalAlignment="Top" 
+        Width="512" 
+        Height="30" 
+        FontSize="20" 
+        Background="#FFCA2A2A" 
+        Foreground="White" RenderTransformOrigin="0.5,0.5" Click="Reject_Click">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border Background="{TemplateBinding Background}" 
+                    BorderBrush="Transparent" 
+                    BorderThickness="1" 
+                    CornerRadius="10">
+                        <ContentPresenter HorizontalAlignment="Center" 
+                        VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button x:Name="Update" Content="UPDATE" 
+Cursor="Hand"
+HorizontalAlignment="Center" 
+Margin="0,432,0,0" 
+VerticalAlignment="Top" 
+Width="520" 
+Height="30" 
+FontSize="20" 
+Background="#FFE8B800" 
+Foreground="White" RenderTransformOrigin="0.5,0.5" Click="Update_Click">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border Background="{TemplateBinding Background}" 
+            BorderBrush="Transparent" 
+            BorderThickness="1" 
+            CornerRadius="10">
+                        <ContentPresenter HorizontalAlignment="Center" 
+                VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <!--Submit and Remove Buttons End-->
+        <DataGrid x:Name="DealerData" AutoGenerateColumns="True" Margin="0,467,0,0" IsReadOnly="True"/>
+    </Grid>
+</Window>
